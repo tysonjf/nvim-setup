@@ -12,5 +12,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	spec = "tysonjf.lazy"
+	{ import = "tysonjf.lazy" },
+	{ import = "tysonjf.lazy.lsp"},
 })
+
+
+
+
