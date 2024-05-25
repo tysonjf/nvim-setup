@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 
+-- Map <C-\><C-n> to exit terminal mode
+vim.api.nvim_set_keymap("t", "<C-\\><C-n>", "<C-\\><C-n>", { noremap = true, silent = true })
+
 local keymap = vim.keymap -- for conciseness
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 -- change caps lock to the control key
