@@ -5,6 +5,9 @@ Leader = " " (space)
 [window]
 Move between windows <C-w> h, j, k, l
 
+[jumping between files]
+Jump to previous file <C-^>
+
 [lsp and completion]
 keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration

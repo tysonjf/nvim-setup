@@ -17,10 +17,14 @@ opt.relativenumber = true
 opt.ignorecase = true
 opt.smartcase = true
 
+-- highlight search results
 opt.cursorline = true
 
+-- scroll settings
+opt.scrolloff = 10
+
 -- clipboard
-opt.clipboard:append('unnamedplus')
+opt.clipboard:append("unnamedplus")
 
 -- show matching brackets
 opt.showmatch = true

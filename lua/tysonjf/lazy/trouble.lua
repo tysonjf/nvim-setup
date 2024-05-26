@@ -9,4 +9,9 @@ return {
 		{ "<leader>xl", "<cmd>TroubleToggle loclist<CR>", desc = "Open trouble location list" },
 		{ "<leader>xt", "<cmd>TodoTrouble<CR>", desc = "Open todos in trouble" },
 	},
+	setup = function()
+		require("trouble").setup({
+			padding = true,
+		})
+	end,
 }

@@ -1,10 +1,20 @@
 vim.g.mapleader = " "
 
+local keymap = vim.keymap -- for conciseness
 -- Map <C-\><C-n> to exit terminal mode
 vim.api.nvim_set_keymap("t", "<C-\\><C-n>", "<C-\\><C-n>", { noremap = true, silent = true })
 
-local keymap = vim.keymap -- for conciseness
+-- Move lines of text
+keymap.set("n", "<C-j>", "<cmd>:m+<CR>", { desc = "Move line down" })
+keymap.set("n", "<C-k>", "<cmd>:m-2<CR>", { desc = "Move line up" })
+keymap.set("v", "<C-j>", ":m'>+<CR>gv", { desc = "Move line down" })
+keymap.set("v", "<C-k>", ":m-2<CR>gv", { desc = "Move line up" })
+
+-- test copilot
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap.set("n", "<leader>cpd", "<cmd>Copilot disable<CR>", { desc = "Disable Copilot" })
+keymap.set("n", "<leader>cpe", "<cmd>Copilot enable<CR>", { desc = "Enable Copilot" })
+
 -- change caps lock to the control key
 keymap.set("i", "<C-[>", "<ESC>", { desc = "Exit insert mode with <C-[>" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
