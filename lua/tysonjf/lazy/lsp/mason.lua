@@ -34,7 +34,6 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"prismals",
-				"pyright",
 			},
 			automatic_installation = true,
 		})
@@ -45,8 +44,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				"pylint",
-				"eslint_d",
+				"eslint_d", -- eslint language server
 			},
 		})
 	end,
